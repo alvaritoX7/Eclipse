@@ -9,7 +9,7 @@ import java.io.IOException;
 public class cuentaVocales {
 	
 	public static void main(String[] args) {
-		leerFichero("ejemplo.txt");
+		leerFichero("ejemplo.tx");
 	}
 	
 	private static void leerFichero(String nombreFichero) {
