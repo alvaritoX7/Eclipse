@@ -1,0 +1,10 @@
+package Excepciones_de_java;
+
+public class Exceptions_05 {
+
+	public static void main(String[] args) {
+		// TODO Apéndice de método generado automáticamente
+
+	}
+
+}

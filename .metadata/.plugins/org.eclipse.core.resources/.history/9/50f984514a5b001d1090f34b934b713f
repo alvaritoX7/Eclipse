@@ -1,0 +1,34 @@
+package Primer_trimestre;
+
+import java.util.Scanner;
+
+public class qwtweqruyqeru {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		Scanner palabras = new Scanner (System.in);
+		
+		System.out.println("Pon tres palabras al azar: ");
+		String palabra1 = palabras.next();
+		String palabra2 = palabras.next();
+		String palabra3 = palabras.next();
+		
+		
+		
+		if ((palabra1.compareToIgnoreCase(palabra2) < 0) && (palabra2.compareToIgnoreCase(palabra3) < 0)) {
+			if ((palabra1.length() == palabra2.length()) && (palabra2.length() == palabra3.length()) && (palabra1.compareToIgnoreCase(palabra2) < 0) && (palabra2.compareToIgnoreCase(palabra3) < 0)){
+				System.out.println(palabra3 + " > " + palabra2 + " > " + palabra1);
+			}
+			else {
+				System.out.println(palabra1 + " > " + palabra2 + " > " + palabra3);
+			}
+			
+		}
+		
+		
+	}
+
+}

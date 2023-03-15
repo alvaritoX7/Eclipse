@@ -1,0 +1,10 @@
+package Tema_3;
+
+public class Ejercicio_8_palabras_palindromas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

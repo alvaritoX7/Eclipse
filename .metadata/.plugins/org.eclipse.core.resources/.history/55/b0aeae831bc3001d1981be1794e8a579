@@ -1,0 +1,73 @@
+package Lista_Ordenada;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+
+public class lista_Ordenada {
+
+	public static void main(String[] args) {
+		leerFichero("ejemplo_04.txt", "ejemplo_05.txt");
+	}
+	
+	private static void leerFichero(String nombreFichero1, String nombreFichero2) {
+		double arrays [] = new double [0];
+		String cadena;
+		double a = 0;
+		try {
+			FileReader lector1 = new FileReader (nombreFichero1);
+			BufferedReader b1 = new BufferedReader (lector1);
+			
+			
+			while ((cadena = b1.readLine()) != null) {
+				arrays = Arrays.copyOf(arrays, arrays.length +1 );
+				
+				a = Double.parseDouble(cadena);
+					
+				arrays[arrays.length - 1] = a; 
+				
+				System.out.println(cadena);
+				
+				
+			}
+			
+			FileReader lector2 = new FileReader (nombreFichero1);
+			BufferedReader b2 = new BufferedReader (lector2);
+			
+			while ((cadena = b2.readLine()) != null) {
+				arrays = Arrays.copyOf(arrays, arrays.length + 1);
+				
+				a = Double.parseDouble(cadena);
+					
+				arrays[arrays.length - 1] = a; 
+				
+				System.out.println(cadena);
+				
+				
+			}
+			
+			FileWriter escritor = new FileWriter ("ejemplo_06.txt", true);
+			BufferedWriter bw = new BufferedWriter (escritor);
+			
+			
+			Arrays.sort(arrays);
+			
+			bw.newLine();
+			bw.write(Arrays.toString(arrays));
+			bw.close();
+		}
+		catch (FileNotFoundException e) {
+			System.out.println("Fichero no encontrado");
+		}
+		catch (IOException io) {
+			System.out.println("Algun problema con la lectura o escritura");
+			System.out.println(io.toString());
+		}
+		
+	}
+
+}

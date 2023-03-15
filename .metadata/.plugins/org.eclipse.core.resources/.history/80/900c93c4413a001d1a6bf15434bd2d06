@@ -1,0 +1,27 @@
+package uno;
+
+import java.util.*;
+
+public class Condicional {
+
+	public static void main(String[] args) {
+		
+		double edad;
+		
+		Scanner teclado = new Scanner (System.in);
+		
+		System.out.println("Digame tu edad");
+		edad = teclado.nextDouble();
+		
+		
+		{if (edad<18) System.out.println("Eres menor");
+		else if  (edad <= 30) System.out.println("Eres joven");
+		else if  (edad<= 50) System.out.println("Erex");
+		else if
+		else if
+		
+	}
+		teclado.close();
+	}
+
+}

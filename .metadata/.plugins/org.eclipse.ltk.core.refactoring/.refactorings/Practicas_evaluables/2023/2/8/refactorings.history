@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;Practicas_2º_Trimestre_Coche.Coche.precioFinal&apos; in &apos;Practicas_2º_Trimestre_Coche.Coche&apos;&#x0D;&#x0A;- Original project: &apos;Practicas_evaluables&apos;&#x0D;&#x0A;- Original element: &apos;Practicas_2º_Trimestre_Coche.Coche.precioFinal&apos;&#x0D;&#x0A;- Getter method name: &apos;getPrecioFinal&apos;&#x0D;&#x0A;- Setter method name: &apos;setPrecioFinal&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;precioFinal&apos;" flags="589830" getter="getPrecioFinal" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;Practicas_2º_Trimestre_Coche{Coche.java[Coche^precioFinal" insertion="23" setter="setPrecioFinal" stamp="1677060303207" version="1.0" visibility="1"/>
+</session>

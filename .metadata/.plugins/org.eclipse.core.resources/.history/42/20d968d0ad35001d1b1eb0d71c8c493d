@@ -1,0 +1,22 @@
+package uno;
+
+import java.util.*;
+
+public class Primero {
+
+	public static void main(String[] args) {
+		
+		Scanner miEscaner = new Scanner (System.in);
+		
+		double numero;
+		
+		System.out.println("Escribe un numero:");
+		
+		numero = miEscaner.nextDouble();	
+		
+		System.out.println("numero es " + numero);
+		
+
+	}
+
+}

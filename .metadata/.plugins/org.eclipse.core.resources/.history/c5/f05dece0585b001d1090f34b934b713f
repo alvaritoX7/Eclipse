@@ -1,0 +1,93 @@
+package Primer_trimestre;
+
+import java.util.*;
+
+public class Ejercicio_02 {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner tomalo = new Scanner (System.in); 
+		
+		int numtomate, descuentotomate,  regalotomate = 0, a;
+		double preciofinal, total, preciotomate = 1.0;
+		
+		
+		System.out.println("Si compras mas de tres kilos de tomates se te hace un 20% de descuento.");
+		System.out.println("Tres kilos de tomates son 15 unidades de tomates.");
+		System.out.println("Desea comprar tomates o kilos de tomates");
+		System.out.println("1- Tomates");
+		System.out.println("2- Kilos de tomates");
+		a = tomalo.nextInt();
+		
+		if (a == 1) {
+			System.out.println("¿Cuantos tomates quieres?");
+			numtomate = tomalo.nextInt();
+			if ((numtomate<=15) && (0<numtomate)) {
+				descuentotomate = 10;
+				total = numtomate * preciotomate;
+				preciofinal = total - ((total * descuentotomate) / 100);
+				
+				System.out.println("Precio total: " + total + " €");
+				System.out.println("Descuento hecho: " + descuentotomate + "%");
+				System.out.println("Precio final: " + preciofinal + " €");
+				System.out.println("Numero de tomates regalados: " + regalotomate);
+			}
+			
+			else if (numtomate>15) {
+				descuentotomate = 20;
+				total = numtomate * preciotomate;
+				preciofinal = total - ((total * descuentotomate) / 100);
+				regalotomate = ((numtomate/5)-2)*2;
+				
+				System.out.println("Precio total: " + total + " €");
+				System.out.println("Descuento hecho: " + descuentotomate + "%");
+				System.out.println("Precio final: " + preciofinal + " €");
+				System.out.println("Numero de tomates regalados: " + regalotomate);
+			}	
+			else {
+					System.out.println("No se pueden comprar cero tomates o numeros negativos.");
+				}
+				
+		}
+		else if (a == 2) {
+			
+			System.out.println("¿Cuantos kilos deseas comprar?");
+			numtomate = tomalo.nextInt();
+			if ((numtomate<=15) && (0<numtomate)) {
+				descuentotomate = 10;
+				total = numtomate * preciotomate*5;
+				preciofinal = total - ((total * descuentotomate) / 100);
+				
+				System.out.println("Precio total: " + total + " €");
+				System.out.println("Descuento hecho: " + descuentotomate + "%");
+				System.out.println("Precio final: " + preciofinal + " €");
+				System.out.println("Numero de tomates regalados: " + regalotomate);
+			}
+			
+			else if (numtomate>15) {
+				descuentotomate = 20;
+				total = numtomate * preciotomate;
+				preciofinal = total - ((total * descuentotomate) / 100);
+				regalotomate = ((numtomate/5)-2)*2;
+				
+				System.out.println("Precio total: " + total + " €");
+				System.out.println("Descuento hecho: " + descuentotomate + "%");
+				System.out.println("Precio final: " + preciofinal + " €");
+				System.out.println("Numero de tomates regalados: " + regalotomate);
+			}
+			else {
+					System.out.println("No se pueden comprar cero tomates o numeros negativos.");
+				}
+			
+		}
+		else {
+			System.out.println("Has puesto mal lo que quieres");
+		}
+		
+		tomalo.close();
+		
+	}
+
+}
+

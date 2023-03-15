@@ -1,0 +1,30 @@
+package uno;
+
+import java.util.*;
+
+public class Tercer {
+
+	public static void main(String[] args) {
+		
+		double s, min, h, sec;
+		
+		Scanner teclado = new Scanner (System.in);
+		
+		System.out.println("Escribe la cantidad de segundos que quieras: ");
+		s = teclado.nextDouble();
+		
+		min = s/60;
+		min = ;
+		sec = s;
+		System.out.println("Horas: " + h + " Minutos: " + min + " Segundos" + s);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

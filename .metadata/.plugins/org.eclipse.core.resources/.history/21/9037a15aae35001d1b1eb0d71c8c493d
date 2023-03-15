@@ -1,0 +1,31 @@
+package uno;
+
+import java.util.*;
+
+public class Primero {
+
+	public static void main(String[] args) {
+		
+		Scanner miEscaner = new Scanner (System.in);
+		
+		double numero;
+		
+		System.out.println("Escribe la nota media del 1º trimestre:");
+		
+		
+		numero = miEscaner.nextDouble();
+		
+		System.out.println("Escribe la nota media del 2º trimestre:");
+		
+		numero = miEscaner.nextDouble();
+		
+		System.out.println("Escribe la nota media del 3º trimestre:");
+		
+		numero = miEscaner.nextDouble();
+		
+		System.out.println("La media es " + numero);
+		
+
+	}
+
+}

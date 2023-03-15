@@ -1,0 +1,18 @@
+package Ejercicios_futbolista;
+
+public class pruebaFutbolista {
+
+	public static void main(String[] args) {
+		
+		DNI d1 = new DNI (123, "L");
+		
+		Futbolista f1 = new Futbolista(d1, "APA", 15, 15);
+		Futbolista f2 = new Futbolista(d1, "ala", 10, 10);
+		
+		f1.equals(f2);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,148 @@
+package Practicas_2ª_Evaluación_Navidades;
+
+import java.util.*;
+
+public class Tablero_3_en_raya_Fase1 {
+
+	public static void main(String[] args) {
+		
+		
+		char [][] Tablero = Crear_tablero();
+		
+		Tablero = Pinta_Tablero(Tablero);
+		
+		Jugar(Tablero);
+		
+	}
+
+	static char [][] Crear_tablero() {
+		
+		char[][] Tablero = new char [3] [3];
+		
+		return Tablero;
+		
+	}
+	
+	static char [][] Pinta_Tablero(char[][] pintar_tablero) {
+		
+		char contador = '1';
+		
+		for (int m = 0; m < 3; m++) {
+			for (int t = 0; t < 3; t++) {
+				pintar_tablero [m] [t] = contador;
+				System.out.print(pintar_tablero [m] [t] + "  ");
+				contador ++; 
+			}
+			System.out.println();
+		}
+		
+		
+		return pintar_tablero;
+		
+	}
+	
+	static void Jugar(char[][] tablero) {
+		boolean Resultado = false, Comprobar;
+		
+		do {
+			Pinta_Jugador(tablero);
+			Pinta_Maquina(tablero);
+			
+			Pinta_Tablero_Jugar(tablero);
+			Comprobar  = Comprobar_tablero(Resultado, tablero);
+		}while (Comprobar != true);
+		
+		
+		
+	}
+
+	static void Pinta_Jugador(char [][] tablero) {
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Donde quieres dibujar la X");
+		int posicion = sc.nextInt();
+		
+		Posicion(posicion, tablero);
+		
+	}
+	
+	static char [][] Posicion(int num, char [][] tablero){
+		
+		if (num == 1) {
+			tablero [0] [0] = 'X';
+		}
+		else if (num == 2) {
+			tablero [0] [1] = 'X';
+		}
+		else if (num == 3) {
+			tablero [0] [2] = 'X';
+		}
+		else if (num == 4) {
+			tablero [1] [0] = 'X';
+		}
+		else if (num == 5) {
+			tablero [1] [1] = 'X';
+		}
+		else if (num == 6) {
+			tablero [1] [2] = 'X';
+		}
+		else if (num == 7) {
+			tablero [2] [0] = 'X';
+		}
+		else if (num == 8) {
+			tablero [2] [1] = 'X';
+		}
+		else if (num == 9) {
+			tablero [2] [2] = 'X';
+		}
+		else {
+			System.out.println("Perdiste un turno por no poner un numero del tablero");
+		}
+		return tablero;
+	}
+	
+	static char [][] Pinta_Maquina (char [][] tablero){
+		
+		int x = 0, y = 0;
+		
+		do {
+			x = (int) (Math.random()* 3);
+			y = (int) (Math.random()* 3);
+			
+			if(tablero[x][y] != 'X') {
+				
+				tablero [x] [y] = 'O';
+			}
+			
+		}while(tablero[x][y] == 'O');
+		
+		
+		return tablero;
+	}
+	static void Pinta_Tablero_Jugar(char [][] tablero) {
+		
+		for (int m = 0; m < 3; m++) {
+			for (int t = 0; t < 3; t++) {
+				System.out.print(tablero [m] [t] + "  ");
+			}
+			System.out.println();
+		}
+	}
+	
+	static boolean Comprobar_tablero(boolean Resultado, char [][] tablero) {
+		
+		if ((tablero [0][0] == 'X' && tablero [0][1] == 'X' && tablero [0][2] == 'X') || (tablero [1][0] == 'X' && tablero [1][1] == 'X' && tablero [1][2] == 'X') || (tablero [2][0] == 'X' && tablero [2][1] == 'X' && tablero [2][2] == 'X') || (tablero [0][0] == 'X' && tablero [1][0] == 'X' && tablero [2][0] == 'X') || (tablero [0][1] == 'X' && tablero [1][1] == 'X' && tablero [2][1] == 'X') || (tablero [0][2] == 'X' && tablero [1][2] == 'X' && tablero [2][2] == 'X') || (tablero [0][0] == 'X' && tablero [1][1] == 'X' && tablero [2][2] == 'X') || (tablero [0][2] == 'X' && tablero [1][1] == 'X' && tablero [2][0] == 'X')) {
+			Resultado = true;
+			System.out.println("Has ganadooooooo");
+		}
+		else if ((tablero [0][0] == 'O' && tablero [0][1] == 'O' && tablero [0][2] == 'O') || (tablero [1][0] == 'O' && tablero [1][1] == 'O' && tablero [1][2] == 'O') || (tablero [2][0] == 'O' && tablero [2][1] == 'O' && tablero [2][2] == 'O') || (tablero [0][0] == 'O' && tablero [1][0] == 'O' && tablero [2][0] == 'O') || (tablero [0][1] == 'O' && tablero [1][1] == 'O' && tablero [2][1] == 'O') || (tablero [0][2] == 'O' && tablero [1][2] == 'O' && tablero [2][2] == 'O') || (tablero [0][0] == 'O' && tablero [1][1] == 'O' && tablero [2][2] == 'O') || (tablero [0][2] == 'O' && tablero [1][1] == 'O' && tablero [2][0] == 'O')) {
+			Resultado = true;
+			System.out.println("La maquina ha ganado");
+		}
+		else {
+			Resultado = false;
+		}
+		
+		return Resultado;
+		
+	}
+}

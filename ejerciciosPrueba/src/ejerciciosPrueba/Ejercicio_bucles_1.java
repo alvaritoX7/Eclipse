@@ -1,0 +1,39 @@
+package ejerciciosPrueba;
+
+ import java.util.*;
+
+public class Ejercicio_bucles_1 {
+
+	public static void main(String[] args) {
+		
+		
+		int contraseña1, contraseña2;
+		Scanner contraseña = new Scanner (System.in);	
+		
+		System.out.println("Introduzca una contraseña");
+		contraseña1 = contraseña.nextInt();
+		
+		System.out.println("Introduzca la misma contraseña");
+		contraseña2 = contraseña.nextInt();
+		
+		
+		while (contraseña1 != contraseña2) {
+			
+			System.out.println("Tienes que poner la misma contraseña dos veces, prueba otra vez");
+			System.out.println("Introduzca una contraseña");
+			contraseña1 = contraseña.nextInt();
+			
+			System.out.println("Introduzca la misma contraseña");
+			contraseña2 = contraseña.nextInt();
+			
+			
+		}
+		
+		System.out.println("Contrasen123a guardada correctamente");
+		
+		contraseña.close();
+		
+		
+	}
+
+}

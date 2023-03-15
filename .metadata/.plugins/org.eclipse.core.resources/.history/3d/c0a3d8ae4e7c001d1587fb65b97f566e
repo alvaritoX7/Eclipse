@@ -1,0 +1,105 @@
+package Practicas_2ª_Evaluación_Navidades;
+
+import java.util.*;
+
+public class Tablero_3_en_raya_Fase2 {
+
+	public static void main(String[] args) {
+		
+		int x = Proporciones_tablero_X ();
+		int y = Proporciones_tablero_y ();
+		
+		int [][] Tablero = Crear_tablero(x, y);
+		Tablero = Pinta_Tablero(Tablero, x, y);
+		Jugar(Tablero, x, y);
+	}
+	static int Proporciones_tablero_X () {
+		Scanner sc_1 = new Scanner (System.in);
+		
+		System.out.println("Cuantas filas quieres que tenga tu tablero");
+		int filas = sc_1.nextInt();
+		
+		return filas;
+		
+	}
+	static int Proporciones_tablero_y () {
+		Scanner sc_1 = new Scanner (System.in);
+		
+		System.out.println("Cuantas columnas quieres que tenga tu tablero");
+		int columnas = sc_1.nextInt();
+		
+		return columnas;
+	}
+	static int [][] Crear_tablero(int filas, int columnas) {
+		
+		
+		int [][] Tablero = new int [filas] [columnas];
+		
+		return Tablero;
+		
+	}
+	static int [][] Pinta_Tablero(int [][] pintar_tablero, int filas, int columnas) {
+		
+		int contador = 1;
+		
+		for (int m = 0; m < filas; m++) {
+			for (int t = 0; t < columnas; t++) {
+				pintar_tablero [m] [t] = contador;
+				if (contador < 1){
+					System.out.print(pintar_tablero [m] [t] + "  ");
+				}
+				else if (contador < 10) {
+					System.out.print(pintar_tablero [m] [t] + "   ");
+				}
+				else {
+					System.out.print(pintar_tablero [m] [t] + "  ");
+				}
+				
+				contador ++; 
+			}
+			System.out.println();
+		}
+		
+		return pintar_tablero;
+		
+	}
+	static void Jugar(int [][] tablero, int filas, int columnas) {
+		boolean Resultado = false, Comprobar;
+		
+		//do {
+			tablero = Pinta_Jugador(tablero, filas, columnas);
+			
+			tablero = Pinta_Tablero(tablero, filas, columnas);
+			
+			//Pinta_Maquina(tablero);
+			
+			//Pinta_Tablero_Jugar(tablero);
+			//Comprobar  = Comprobar_tablero(Resultado, tablero);
+		//}while (Comprobar != true);
+		
+	}
+	static int [][] Pinta_Jugador(int [][] tablero, int filas, int columnas){
+		Scanner sc_2 = new Scanner (System.in);
+		
+		System.out.println("En que posicion pones el -1");
+		int Posicion_X = sc_2.nextInt();
+		
+		tablero = Posicion(tablero, Posicion_X, filas, columnas);
+		
+		return tablero;
+		
+	}
+	static int [][] Posicion(int [][] tablero, int num, int fila, int columna){
+		
+		for (int m = 0; m < fila; m++) {
+			for (int t = 0; t < columna; t++) {
+				if (tablero [m] [t] == 4) {
+					tablero [m] [t] = -1;
+				}
+			}
+		}
+		
+			
+		return tablero;
+	}
+}

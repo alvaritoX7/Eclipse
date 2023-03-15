@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Borrar el recurso &apos;Ejercicios_de_Repaso_Evaluación_01&apos;." deleteContents="false" description="Borrar el recurso &apos;Ejercicios_de_Repaso_Evaluación_01&apos;." element1="/Ejercicios_de_Repaso_Evaluación_01" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1674562776035"/>
+</session>

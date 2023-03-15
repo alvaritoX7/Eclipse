@@ -1,0 +1,20 @@
+package Ejercicios_futbolista;
+
+public class DNI {
+	
+	private int num;
+	private char letra;
+	
+	public int getNum() {
+		return num;
+	}
+	public int getLetra() {
+		return letra;
+	}
+	
+	public String toString () {
+		
+		return this.num + " " + this.letra;
+	}
+	
+}

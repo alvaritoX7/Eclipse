@@ -1,0 +1,71 @@
+package Ejercicios_futbolista;
+
+import java.util.Objects;
+
+public class Futbolista {
+	
+	private DNI dni;
+	private String nombre;
+	private int edad;
+	private int num_goles;
+	
+	public Futbolista(DNI dni, String nombre, int edad, int num_goles) {
+		this.dni = dni;
+		this.nombre = nombre;
+		this.edad = edad;
+		this.num_goles = num_goles;
+	}
+	
+	public DNI getDni() {
+		return dni;
+	}
+	public void setDni(DNI dni) {
+		this.dni = dni;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public int getNum_goles() {
+		return num_goles;
+	}
+	public void setNum_goles(int num_goles) {
+		this.num_goles = num_goles;
+	}
+	
+	
+	public String toString () {
+		
+		return this.nombre + ", " + this.edad + " con DNI: " + this.dni + " y numero de goles " + this.num_goles;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Futbolista other = (Futbolista) obj;
+		return Objects.equals(dni, other.dni);
+	}
+	
+	
+	
+	
+	
+}

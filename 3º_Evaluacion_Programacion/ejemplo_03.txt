@@ -1,0 +1,6 @@
+Paco 7 3 8
+Maria 9 2 10
+Angel 2 3 1
+Paco 6.0
+Maria 7.0
+Angel 2.0

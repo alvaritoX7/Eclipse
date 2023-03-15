@@ -1,0 +1,7 @@
+package Ejercicios_futbolista;
+
+import java.util.Comparator;
+
+public class comparadosEdad implements Comparator<Futbolista>{
+
+}
